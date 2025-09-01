@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonardo Silva - Desenvolvedor Front-end e Analista de Dados</title>
+    <meta name="description" content="Portfólio profissional de Leonardo Silva - Desenvolvedor Front-end e Analista de Dados especializado em HTML, CSS, JavaScript, Python, Power BI e MySQL">
+    
+     Tailwind CSS 
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+     Google Fonts 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+     Lucide Icons 
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .typing-animation {
+            border-right: 2px solid #3b82f6;
+            animation: blink 1s infinite;
+            min-height: 1.5em;
+            display: inline-block;
+        }
+        
+        @keyframes blink {
+            0%, 50% { border-color: #3b82f6; }
+            51%, 100% { border-color: transparent; }
+        }
+        
+        .skill-bar {
+            transition: width 2s ease-in-out;
+            width: 0%;
+        }
+        
+        .skill-bar.animate {
+            width: var(--target-width);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+
+        /* Adicionando estilos para garantir que as seções sejam visíveis */
+        section {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Melhorando a responsividade da imagem de perfil */
+        .profile-image {
+            max-width: 300px;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 smooth-scroll">
+     Navigation 
+    <nav class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md z-50 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-xl font-bold text-blue-600">Leonardo Silva</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors">Início</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors">Sobre</a>
+                    <a href="#skills" class="text-gray-700 hover:text-blue-600 transition-colors">Habilidades</a>
+                    <a href="#experience" class="text-gray-700 hover:text-blue-600 transition-colors">Experiência</a>
+                    <a href="#projects" class="text-gray-700 hover:text-blue-600 transition-colors">Projetos</a>
+                    <a href="#dashboards" class="text-gray-700 hover:text-blue-600 transition-colors">Dashboards</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors">Contato</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center justify-center gradient-bg text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                        Olá, eu sou<br>
+                        <span class="text-yellow-300">Leonardo Silva</span>
+                    </h1>
+                     
+                    <p class="text-xl md:text-2xl mb-8">
+                        <span id="typing-text" class="typing-animation">Desenvolvedor Front-end e Analista de dados</span>
+                    </p>
+                    <p class="text-lg mb-8 text-gray-200">
+                        Especializado em criar experiências digitais modernas e análises de dados impactantes. 
+                        Com mais de 8 anos de experiência em TI, transformo ideias em soluções tecnológicas eficientes.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#projects" class="bg-yellow-400 text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+                            Ver Projetos
+                        </a>
+                        <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">
+                            Entre em Contato
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                     
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%201%20de%20set.%20de%202025%2C%2014_31_47-go07baYiD5j9N76SsfPRKs8caN32h2.png" alt="Leonardo Silva" class="profile-image rounded-full border-4 border-yellow-300 shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Sobre Mim</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Profissional apaixonado por tecnologia com foco em desenvolvimento front-end e análise de dados
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6 bg-gray-50 rounded-lg card-hover">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="code" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Desenvolvimento</h3>
+                    <p class="text-gray-600">Atualmente Programador Júnior na Hostnet, desenvolvendo sistemas internos em Python e MySQL com foco em performance e escalabilidade.</p>
+                </div>
+                
+                <div class="text-center p-6 bg-gray-50 rounded-lg card-hover">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="bar-chart-3" class="w-8 h-8 text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Análise de Dados</h3>
+                    <p class="text-gray-600">Especialista em Power BI, Excel avançado e SQL, transformando dados em insights estratégicos para tomada de decisões.</p>
+                </div>
+                
+                <div class="text-center p-6 bg-gray-50 rounded-lg card-hover">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="graduation-cap" class="w-8 h-8 text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Formação</h3>
+                    <p class="text-gray-600">Cursando Bacharelado em Sistemas de Informação na Estácio de Sá (previsão 2026) e certificação ITIL Foundation v3.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Habilidades Técnicas</h2>
+                <p class="text-xl text-gray-600">Tecnologias e ferramentas que domino</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                 Desenvolvimento Front-end 
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-6 text-blue-600">Desenvolvimento Front-end</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">HTML5 & CSS3</span>
+                                <span class="text-sm text-gray-500">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full skill-bar" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">JavaScript</span>
+                                <span class="text-sm text-gray-500">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full skill-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">React & Next.js</span>
+                                <span class="text-sm text-gray-500">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full skill-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">TypeScript</span>
+                                <span class="text-sm text-gray-500">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full skill-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 Desenvolvimento Back-end 
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-6 text-green-600">Desenvolvimento Back-end</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Python</span>
+                                <span class="text-sm text-gray-500">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-600 h-2 rounded-full skill-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">MySQL</span>
+                                <span class="text-sm text-gray-500">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-600 h-2 rounded-full skill-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">PHP</span>
+                                <span class="text-sm text-gray-500">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-600 h-2 rounded-full skill-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Node.js</span>
+                                <span class="text-sm text-gray-500">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-600 h-2 rounded-full skill-bar" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 Análise de Dados 
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-6 text-purple-600">Análise de Dados</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Power BI</span>
+                                <span class="text-sm text-gray-500">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full skill-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Excel Avançado</span>
+                                <span class="text-sm text-gray-500">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full skill-bar" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">SQL Analytics</span>
+                                <span class="text-sm text-gray-500">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full skill-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Data Visualization</span>
+                                <span class="text-sm text-gray-500">88%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full skill-bar" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Experience Section 
+    <section id="experience" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Experiência Profissional</h2>
+                <p class="text-xl text-gray-600">Mais de 8 anos construindo soluções tecnológicas</p>
+            </div>
+            
+            <div class="space-y-8">
+                <div class="bg-gray-50 p-6 rounded-lg card-hover">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900">Programador Júnior</h3>
+                            <p class="text-blue-600 font-medium">Hostnet – RJ</p>
+                        </div>
+                        <span class="text-gray-500 font-medium">Nov/2023 – Atual</span>
+                    </div>
+                    <p class="text-gray-700">
+                        Desenvolvimento e manutenção de sistemas internos em Python e MySQL. Suporte e manutenção de sites hospedados, 
+                        além da implementação de melhorias em funcionalidades e desempenho de aplicações.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-lg card-hover">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900">Técnico de TI</h3>
+                            <p class="text-blue-600 font-medium">Exército Brasileiro – RJ</p>
+                        </div>
+                        <span class="text-gray-500 font-medium">Fev/2017 – Fev/2025</span>
+                    </div>
+                    <p class="text-gray-700">
+                        Atendimento remoto e presencial a mais de 100 usuários. Administração de servidores, redes e segurança da informação. 
+                        Treinamento de usuários em boas práticas e uso de sistemas corporativos.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-lg card-hover">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900">Programador Júnior</h3>
+                            <p class="text-blue-600 font-medium">GeoHub – RJ</p>
+                        </div>
+                        <span class="text-gray-500 font-medium">Abr/2013 – Mar/2014</span>
+                    </div>
+                    <p class="text-gray-700">
+                        Desenvolvimento de sistemas internos em PHP, JavaScript e SQL, com criação de scripts para automação de processos e relatórios.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Projects Section 
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Projetos</h2>
+                <p class="text-xl text-gray-600">Alguns dos meus trabalhos mais recentes</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                 Projeto Fanta 
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fanta%20page.gif-4WX5J4pFCsSC4pKyMJ2fjV8sgfqz6J.jpeg" alt="Landing Page Fanta" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Landing Page Fanta</h3>
+                        <p class="text-gray-600 mb-4">
+                            Landing page interativa com animações GSAP avançadas, ScrollTrigger e elementos flutuantes sincronizados. 
+                            Design vibrante com gradientes laranja e experiência imersiva de scroll.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">HTML5</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">CSS3</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">JavaScript</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">GSAP</span>
+                        </div>
+                    </div>
+                </div>
+
+                 Login Page 
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/login%20page-eSTzzHbF8h6IH2AlVAB9hpgwztFc5C.png" alt="Página de Login" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Página de Login Moderna</h3>
+                        <p class="text-gray-600 mb-4">
+                            Interface de login elegante com efeito glassmorphism, fundo gradiente dinâmico e formulário responsivo. 
+                            Design focado em UX com validação em tempo real.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">HTML5</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">CSS3</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">JavaScript</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Glassmorphism</span>
+                        </div>
+                    </div>
+                </div>
+
+                 Pomodoro Timer 
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pomodoro-7Z78YHaDhUbiaCHg7dlrFEQbM4Ku7U.png" alt="Chronos Pomodoro" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Chronos - Timer Pomodoro</h3>
+                        <p class="text-gray-600 mb-4">
+                            Aplicativo de produtividade baseado na técnica Pomodoro com design minimalista, 
+                            controles intuitivos e sistema de tarefas integrado.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">HTML5</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">CSS3</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">JavaScript</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Timer API</span>
+                        </div>
+                    </div>
+                </div>
+
+                 To-Do List 
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/to-do%20list.jpg-aBbf9MoeWTxYKQitCYd24QANEV7Ggv.jpeg" alt="Lista de Afazeres" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Lista de Afazeres Avançada</h3>
+                        <p class="text-gray-600 mb-4">
+                            Aplicação completa de gerenciamento de tarefas com filtros, prioridades, 
+                            persistência local e funcionalidades de export/import.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">HTML5</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">CSS3</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">JavaScript</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">LocalStorage</span>
+                        </div>
+                    </div>
+                </div>
+
+                 Inverter Texto 
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/inverter%20texto.jpg-Ypn9MqXz92hv7AkXK7ZpN4LZM8MtM3.jpeg" alt="Inverter Texto" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Manipulador de Texto</h3>
+                        <p class="text-gray-600 mb-4">
+                            Ferramenta web para manipulação de strings com funcionalidades de inversão de texto, 
+                            alternância de tema e interface responsiva.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">HTML5</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">CSS3</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">JavaScript</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">DOM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Dashboards Section 
+    <section id="dashboards" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Dashboards & Análises</h2>
+                <p class="text-xl text-gray-600">Projetos de Business Intelligence e visualização de dados</p>
+            </div>
+            
+             Capa do Projeto 
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-green-600 to-green-800 rounded-lg overflow-hidden shadow-2xl">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/capa%20controle%20de%20veiculos.jpg-a7B0iFmYN57X0bGgPCq1SaAHk6WFmC.jpeg" alt="Controle de Locação de Veículos" class="w-full h-64 object-cover">
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                 Dashboard Controle de Veículos 
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Controle%20de%20veiculos.jpg-gMFnf5irEaKNL5bjumDZ4GEugBBrde.jpeg" alt="Dashboard Controle de Veículos" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Sistema de Controle de Veículos</h3>
+                        <p class="text-gray-600 mb-4">
+                            Dashboard completo para gestão de frota com métricas de faturamento, quilometragem média, 
+                            análise temporal e controle detalhado por veículo. Interface intuitiva com gráficos interativos.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Power BI</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">SQL</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">DAX</span>
+                        </div>
+                    </div>
+                </div>
+
+                 Dashboard Controle de Clientes 
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Controle%20de%20Clientes.jpg-BZUBhGgab9zuTaRZtDIkHVWoJM70Cd.jpeg" alt="Dashboard Controle de Clientes" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Dashboard de Controle de Clientes</h3>
+                        <p class="text-gray-600 mb-4">
+                            Sistema de CRM com análise de cadastros, segmentação de clientes e métricas de faturamento. 
+                            Visualizações claras para identificação de oportunidades de negócio.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Power BI</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Excel</span>
+                            <span class="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">Data Modeling</span>
+                        </div>
+                    </div>
+                </div>
+
+                 Dashboard RH 
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/projeto%20RH.jpg-DyC7kiU2g132UMIsMjWi3Cmg7iFooi.jpeg" alt="Dashboard RH" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Dashboard de RH</h3>
+                        <p class="text-gray-600 mb-4">
+                            Painel executivo para gestão de recursos humanos com análise demográfica, 
+                            controle salarial por departamento e métricas de absenteísmo.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Power BI</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">HR Analytics</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">KPIs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Contact Section 
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Entre em Contato</h2>
+                <p class="text-xl text-gray-600">Vamos conversar sobre oportunidades e projetos</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Informações de Contato</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i data-lucide="mail" class="w-6 h-6 text-blue-600 mr-4"></i>
+                            <span>leonardo.silvaa2012@gmail.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-lucide="phone" class="w-6 h-6 text-blue-600 mr-4"></i>
+                            <span>(21) 99171-3469</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-lucide="map-pin" class="w-6 h-6 text-blue-600 mr-4"></i>
+                            <span>Rio de Janeiro, RJ</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-lucide="linkedin" class="w-6 h-6 text-blue-600 mr-4"></i>
+                            <a href="https://www.linkedin.com/in/leonardosilva-826083231/" target="_blank" class="text-blue-600 hover:underline">
+                                LinkedIn Profile
+                            </a>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-lucide="github" class="w-6 h-6 text-blue-600 mr-4"></i>
+                            <a href="https://github.com/lvsilvaa" target="_blank" class="text-blue-600 hover:underline">
+                                GitHub Profile
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nome</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Mensagem</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Footer 
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p>&copy; 2024 Leonardo Silva. Todos os direitos reservados.</p>
+                <p class="mt-2 text-gray-400">Desenvolvido com ❤️ usando HTML, CSS e JavaScript</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        const typingText = document.getElementById('typing-text');
+        const texts = [
+            'Desenvolvedor Front-end e Analista de dados',
+            'Especialista em Python e MySQL',
+            'Expert em Power BI e Excel',
+            'Criador de soluções inovadoras'
+        ];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeWriter() {
+            const currentText = texts[textIndex];
+            
+            if (isDeleting) {
+                typingText.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingText.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentText.length) {
+                setTimeout(() => isDeleting = true, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+            }
+
+            setTimeout(typeWriter, isDeleting ? 50 : 100);
+        }
+
+        // Start typing animation after page load
+        window.addEventListener('load', () => {
+            setTimeout(typeWriter, 1000);
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            console.log('Mobile menu clicked');
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            if (name && email && message) {
+                const subject = encodeURIComponent(`Contato de ${name} - Portfólio`);
+                const body = encodeURIComponent(`Nome: ${name}\nEmail: ${email}\n\nMensagem:\n${message}`);
+                const mailtoLink = `mailto:leonardo.silvaa2012@gmail.com?subject=${subject}&body=${body}`;
+                
+                window.location.href = mailtoLink;
+                
+                this.reset();
+                alert('Obrigado pelo contato! Seu cliente de email será aberto.');
+            } else {
+                alert('Por favor, preencha todos os campos.');
+            }
+        });
+
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const skillBars = entry.target.querySelectorAll('.skill-bar');
+                    skillBars.forEach(bar => {
+                        const targetWidth = bar.style.width;
+                        bar.style.setProperty('--target-width', targetWidth);
+                        bar.classList.add('animate');
+                    });
+                }
+            });
+        }, observerOptions);
+
+        // Observe skills section
+        const skillsSection = document.getElementById('skills');
+        if (skillsSection) {
+            observer.observe(skillsSection);
+        }
+
+        window.addEventListener('load', () => {
+            console.log('[v0] Page loaded, checking sections visibility');
+            const sections = document.querySelectorAll('section');
+            sections.forEach((section, index) => {
+                console.log(`[v0] Section ${index + 1} (${section.id}):`, section.offsetHeight > 0 ? 'visible' : 'hidden');
+            });
+        });
+    </script>
+</body>
+</html>
