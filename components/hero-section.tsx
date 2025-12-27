@@ -39,7 +39,7 @@ export function HeroSection() {
               <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-accent shadow-2xl">
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%201%20de%20set.%20de%202025%2C%2014_31_47-go07baYiD5j9N76SsfPRKs8caN32h2.png"
-                  alt="Leonardo Silva - Desenvolvedor Front-end e Analista de dados"
+                  alt="Leonardo Silva - Desenvolvedor Front-end React"
                   width={320}
                   height={320}
                   className="w-full h-full object-cover"
@@ -65,9 +65,8 @@ export function HeroSection() {
             </div>
 
             <p className="text-lg sm:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto lg:mx-0 text-pretty">
-              Programador Júnior na Hostnet e Técnico de TI no Exército Brasileiro com 8+ anos de experiência.
-              Especializado em desenvolvimento web com HTML, CSS, JavaScript, Python e análise de dados com Power BI e
-              SQL.
+               Especializado em criar experiências digitais modernas e análises de dados impactantes. 
+                Com mais de 8 anos de experiência em TI, transformo ideias em soluções tecnológicas eficientes.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-16">
