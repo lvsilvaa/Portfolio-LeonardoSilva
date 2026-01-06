@@ -5,8 +5,8 @@ import { Building2, Calendar, MapPin } from "lucide-react"
 export function ExperienceSection() {
   const experiences = [
     {
-      title: "Programador Júnior",
-      company: "Hostnet",
+      title: "Desenvolvedor Frontend",
+      company: "ASR Brasil",
       location: "Rio de Janeiro, RJ",
       period: "Nov 2023 - Atual",
       description:
