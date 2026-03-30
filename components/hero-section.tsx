@@ -36,16 +36,16 @@ export function HeroSection() {
           {/* Coluna da foto */}
           <div className="flex justify-center lg:justify-end order-2 lg:order-1">
             <div className="relative">
-              <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-accent shadow-2xl">
+                <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-accent shadow-2xl">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%201%20de%20set.%20de%202025%2C%2014_31_47-go07baYiD5j9N76SsfPRKs8caN32h2.png"
-                  alt="Leonardo Silva - Desenvolvedor Front-end React"
+                  src="/fotoPerfil.png"
+                  alt="Foto do Perfil."
                   width={320}
                   height={320}
-                  className="w-full h-full object-cover"
                   priority
+                  className="object-cover w-full h-full"
                 />
-              </div>
+                </div>
               {/* Elemento decorativo */}
               <div className="absolute -z-10 top-4 left-4 w-80 h-80 rounded-full bg-accent/20"></div>
             </div>

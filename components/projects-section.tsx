@@ -20,7 +20,7 @@ export function ProjectsSection() {
       technologies: ["HTML", "CSS", "JavaScript", "GSAP", "ScrollTrigger"],
       category: "frontend",
       github: "#",
-      demo: "#",
+      demo: "https://page-fanta.vercel.app/",
     },
     {
       id: 2,
@@ -39,10 +39,10 @@ export function ProjectsSection() {
       description:
         "Aplicativo de produtividade baseado na técnica Pomodoro, com interface minimalista, gerenciamento de tarefas e design responsivo para foco e concentração.",
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pomodoro-7Z78YHaDhUbiaCHg7dlrFEQbM4Ku7U.png",
-      technologies: ["HTML", "CSS", "JavaScript"],
+      technologies: ["HTML", "CSS", "JavaScript", "Typescript", "Vite", "React" ],
       category: "frontend",
       github: "#",
-      demo: "#",
+      demo: "https://chronos-pomodoro-two-ruby.vercel.app/",
     },
     {
       id: 4,
@@ -54,7 +54,7 @@ export function ProjectsSection() {
       technologies: ["HTML", "CSS", "JavaScript", "LocalStorage"],
       category: "frontend",
       github: "#",
-      demo: "#",
+      demo: "to-do-list-2kl3q8iok-leonardoosilvaa2012-8767s-projects.vercel.app",
     },
     {
       id: 5,
